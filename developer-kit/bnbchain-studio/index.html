@@ -29,7 +29,7 @@
     
     
     
-        <title>BNBChain Studio</title>
+        <title>BNB Agent Studio</title>
     
 
     
@@ -146,7 +146,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bnbchain-studio" class="md-skip">
+        <a href="#bnb-agent-studio" class="md-skip">
           Skip to content
         </a>
       
@@ -871,6 +871,8 @@
       
         
       
+        
+      
     
     
     
@@ -986,7 +988,7 @@
   <span class="md-ellipsis">
     
   
-    BNBAgent SDK
+    BNB Agent SDK
   
 
     
@@ -1008,7 +1010,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    BNBAgent SDK
+    BNB Agent SDK
   
 
           </label>
@@ -1280,7 +1282,7 @@
   <span class="md-ellipsis">
     
   
-    BNBChain Studio
+    BNB Agent Studio
   
 
     
@@ -1302,7 +1304,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    BNBChain Studio
+    BNB Agent Studio
   
 
           </label>
@@ -1957,6 +1959,81 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../privacy-at-scale/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Privacy at Scale
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Privacy at Scale
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2076,10 +2153,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#relationship-to-bnbagent-sdk" class="md-nav__link">
+  <a href="#relationship-to-bnb-agent-sdk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Relationship to BNBAgent SDK
+        Relationship to BNB Agent SDK
       
     </span>
   </a>
@@ -2194,7 +2271,7 @@
         <a href="./" class="md-path__link">
           
   <span class="md-ellipsis">
-    BNBChain Studio
+    BNB Agent Studio
   </span>
 
         </a>
@@ -2221,9 +2298,9 @@
   
 
 
-<div><h1 id="bnbchain-studio">BNBChain Studio<a class="headerlink" href="#bnbchain-studio" title="Link to this section">¶</a></h1>
-<p>Scaffold, run, and deploy a <strong>two-layer blockchain seller</strong> on BNB Chain. BNBChain Studio (<code>bnbagent-studio</code>) lets you describe what you want in Claude Code or Cursor; the studio emits a working agent project that <strong>you own</strong>, then helps you develop, debug, and deploy it.</p>
-<p>A seller agent earns on-chain by offering services over <strong>ERC-8004</strong> (identity) + <strong>ERC-8183</strong> (commerce) + <strong>x402</strong> (payments), built on the <a href="https://docs.bnbchain.org/developer-kit/bnbagent-sdk/">BNBAgent SDK</a>.</p>
+<div><h1 id="bnb-agent-studio">BNB Agent Studio<a class="headerlink" href="#bnb-agent-studio" title="Link to this section">¶</a></h1>
+<p>Scaffold, run, and deploy a <strong>two-layer blockchain seller</strong> on BNB Chain. BNB Agent Studio (<code>bnbagent-studio</code>) lets you describe what you want in Claude Code or Cursor; the studio emits a working agent project that <strong>you own</strong>, then helps you develop, debug, and deploy it.</p>
+<p>A seller agent earns on-chain by offering services over <strong>ERC-8004</strong> (identity) + <strong>ERC-8183</strong> (commerce) + <strong>x402</strong> (payments), built on the <a href="https://docs.bnbchain.org/developer-kit/bnbagent-sdk/">BNB Agent SDK</a>.</p>
 <blockquote>
 <p><strong>v0.0.1 is seller-only.</strong> The CLI (<code>bag</code>), runtime library (<code>bnbagent_studio_core</code>), read-only MCP server, and IDE skills ship today. Buyer product flows and a hosted console are deferred to v2.</p>
 <p>⚠️ This project is under active development and may introduce breaking changes. It manages wallet keys and on-chain funds — start on <strong>testnet</strong> and use at your own risk.</p>
@@ -2282,7 +2359,7 @@
 <li><strong>Layer A — the Agent</strong> (<code>app/agent/</code> → AWS Bedrock AgentCore): the LLM, memory, tools, and <strong>sole key-holder/signer</strong>. Invoked on action envelopes (<code>quote</code> / <code>fulfill</code> / <code>settle</code>). All signing is fixed entrypoint code — never an LLM-callable tool.</li>
 <li><strong>Layer B — the ERC-8183 Service</strong> (<code>app/service/</code> → EC2/Fargate): a public, long-running, <strong>keyless</strong> container — <code>/negotiate</code> ingress, funded-job poller, and <code>InvokeAgentRuntime</code> client. Holds no key, runs no LLM, never signs.</li>
 </ul>
-<h2 id="relationship-to-bnbagent-sdk">Relationship to BNBAgent SDK<a class="headerlink" href="#relationship-to-bnbagent-sdk" title="Link to this section">¶</a></h2>
+<h2 id="relationship-to-bnb-agent-sdk">Relationship to BNB Agent SDK<a class="headerlink" href="#relationship-to-bnb-agent-sdk" title="Link to this section">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -2294,7 +2371,7 @@
 <tbody>
 <tr>
 <td>Protocol</td>
-<td><a href="https://pypi.org/project/bnbagent/">bnbagent</a> (BNBAgent SDK)</td>
+<td><a href="https://pypi.org/project/bnbagent/">bnbagent</a> (BNB Agent SDK)</td>
 <td>ERC-8004, ERC-8183, wallet ABC — pure protocol clients</td>
 </tr>
 <tr>
@@ -2314,7 +2391,7 @@
 </tr>
 </tbody>
 </table>
-<p>Use BNBAgent SDK directly when you want full control over protocol integration. Use BNBChain Studio when you want scaffolding, IDE skills, a two-layer deploy path, and safety defaults out of the box.</p>
+<p>Use BNB Agent SDK directly when you want full control over protocol integration. Use BNB Agent Studio when you want scaffolding, IDE skills, a two-layer deploy path, and safety defaults out of the box.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this section">¶</a></h2>
 <table>
 <thead>
@@ -2413,7 +2490,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 12, 2026 07:28:25 UTC">June 12, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 19, 2026 05:02:39 UTC">June 19, 2026</span>
   </span>
 
     
