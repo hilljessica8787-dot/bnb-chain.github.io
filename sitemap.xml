@@ -6,7 +6,7 @@
     </url>
     <url>
          <loc>https://docs.bnbchain.org/announce/</loc>
-         <lastmod>2026-02-06</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://docs.bnbchain.org/announce/altai-gnfd/</loc>
@@ -83,6 +83,18 @@
     <url>
          <loc>https://docs.bnbchain.org/announce/second-sunset-bc/</loc>
          <lastmod>2024-06-27</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.bnbchain.org/announce/token-recovery-sunset-phase2/</loc>
+         <lastmod>2026-06-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.bnbchain.org/announce/token-recovery-sunset-phase3/</loc>
+         <lastmod>2026-06-29</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.bnbchain.org/announce/token-recovery-sunset-plan/</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://docs.bnbchain.org/announce/veld-greenfield/</loc>
