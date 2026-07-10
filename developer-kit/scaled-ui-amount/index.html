@@ -12,31 +12,31 @@
         <meta name="author" content="BNB Chain">
       
       
-        <link rel="canonical" href="https://docs.bnbchain.org/bc-fusion/post-fusion/token-recovery/">
+        <link rel="canonical" href="https://docs.bnbchain.org/developer-kit/scaled-ui-amount/">
       
       
-        <link rel="prev" href="../merkle-tree-verify/">
+        <link rel="prev" href="../mpp-sdk/examples/">
       
       
-        <link rel="next" href="../faq/">
+        <link rel="next" href="demo/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/bnb.svg">
+      <link rel="icon" href="../../assets/bnb.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
     
-        <title>Token Recovery</title>
+        <title>Scaled UI Amount (ERC-8056)</title>
     
 
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -57,25 +57,25 @@
     
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap">
     
-      <link rel="stylesheet" href="../../../assets/style/index.css">
+      <link rel="stylesheet" href="../../assets/style/index.css">
     
-      <link rel="stylesheet" href="../../../assets/style/components/banner.css">
+      <link rel="stylesheet" href="../../assets/style/components/banner.css">
     
-      <link rel="stylesheet" href="../../../assets/style/components/nav.css">
+      <link rel="stylesheet" href="../../assets/style/components/nav.css">
     
-      <link rel="stylesheet" href="../../../assets/style/components/sidebar.css">
+      <link rel="stylesheet" href="../../assets/style/components/sidebar.css">
     
-      <link rel="stylesheet" href="../../../assets/style/components/content.css">
+      <link rel="stylesheet" href="../../assets/style/components/content.css">
     
-      <link rel="stylesheet" href="../../../assets/style/components/footer-nav.css">
+      <link rel="stylesheet" href="../../assets/style/components/footer-nav.css">
     
-      <link rel="stylesheet" href="../../../assets/style/components/footer.css">
+      <link rel="stylesheet" href="../../assets/style/components/footer.css">
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0.16.10/dist/katex.min.css">
     
-      <link rel="stylesheet" href="../../../assets/style/components/superintern.css">
+      <link rel="stylesheet" href="../../assets/style/components/superintern.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -146,7 +146,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#token-recovery-dapp" class="md-skip">
+        <a href="#scaled-ui-amount-erc-8056" class="md-skip">
           Skip to content
         </a>
       
@@ -197,7 +197,7 @@
                 data-md-component="logo"
         >
             
-  <img src="../../../assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
         </a>
 
@@ -334,7 +334,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -355,7 +355,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../announce/" class="md-tabs__link">
+        <a href="../../announce/" class="md-tabs__link">
           
   
   
@@ -377,7 +377,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../bnb-smart-chain/" class="md-tabs__link">
+        <a href="../../bnb-smart-chain/" class="md-tabs__link">
           
   
   
@@ -399,7 +399,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../bnb-opbnb/" class="md-tabs__link">
+        <a href="../../bnb-opbnb/" class="md-tabs__link">
           
   
   
@@ -421,7 +421,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../bnb-greenfield/" class="md-tabs__link">
+        <a href="../../bnb-greenfield/" class="md-tabs__link">
           
   
   
@@ -439,11 +439,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../developer-kit/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -461,13 +463,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../bc-fusion/" class="md-tabs__link">
           
   
   
@@ -511,7 +511,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://www.bnbchain.org" title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
       
-  <img src="../../../assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     Documentation
@@ -538,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -595,7 +595,7 @@
   
   
   
-    <a href="../../../announce/" class="md-nav__link">
+    <a href="../../announce/" class="md-nav__link">
       
   
   
@@ -676,7 +676,7 @@
   
   
   
-    <a href="../../../bnb-smart-chain/" class="md-nav__link">
+    <a href="../../bnb-smart-chain/" class="md-nav__link">
       
   
   
@@ -747,7 +747,7 @@
   
   
   
-    <a href="../../../bnb-opbnb/" class="md-nav__link">
+    <a href="../../bnb-opbnb/" class="md-nav__link">
       
   
   
@@ -820,7 +820,7 @@
   
   
   
-    <a href="../../../bnb-greenfield/" class="md-nav__link">
+    <a href="../../bnb-greenfield/" class="md-nav__link">
       
   
   
@@ -850,6 +850,8 @@
       
   
   
+    
+  
   
   
     
@@ -867,6 +869,1301 @@
       
         
       
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Kit
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer Kit
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../bnbagent-sdk/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BNB Agent SDK
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    BNB Agent SDK
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bnbagent-sdk/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bnbagent-sdk/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bnbagent-sdk/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bnbagent-sdk/networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Networks & Contracts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bnbagent-sdk/examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bnbagent-sdk/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bnbagent-sdk/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../bnbchain-studio/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BNB Agent Studio
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    BNB Agent Studio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bnbchain-studio/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bnbchain-studio/demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bnbchain-studio/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bnbchain-studio/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bnbchain-studio/cli-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bnbchain-studio/deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bnbchain-studio/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bnbchain-studio/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../greenfield-sdk/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Greenfield SDK
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Greenfield SDK
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../mcp/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP & Ask AI
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_5" id="__nav_6_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MCP & Ask AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ask-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ask AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ask-ai/vs-code-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VS Code guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../mpp-sdk/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MPP SDK
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MPP SDK
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mpp-sdk/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mpp-sdk/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mpp-sdk/replay-store/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Replay Store
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mpp-sdk/examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scaled UI Amount (ERC-8056)
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_6_7" id="__nav_6_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Scaled UI Amount (ERC-8056)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../privacy-at-scale/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Privacy at Scale
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Privacy at Scale
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
         
       
         
@@ -893,14 +2190,14 @@
   
   
   
-    <a href="../../../developer-kit/" class="md-nav__link">
+    <a href="../../bc-fusion/" class="md-nav__link">
       
   
   
   <span class="md-ellipsis">
     
   
-    Developer Kit
+    BNB Chain Fusion
   
 
     
@@ -914,408 +2211,6 @@
     </a>
   
 
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-      
-        
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    BNB Chain Fusion
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    BNB Chain Fusion
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../overview/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Post Fusion
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_7_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Post Fusion
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../merkle-tree-verify/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Merkle Proof Verification
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Token Recovery
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Token Recovery
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Steps
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-connect-to-your-bc-wallet" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Connect to your BC wallet.
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-select-the-bep2bep8-assets-to-be-recovered" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Select the BEP2/BEP8 assets to be recovered.
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-input-the-receiver-address" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Input the receiver address.
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-4-confirm-the-receiver-address-and-signing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Confirm the receiver address and signing.
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-5-send-the-token-recovery-transaction-to-bsc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 5: Send the token recovery transaction to BSC.
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-6-wait-for-the-recovery" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 6: Wait for the recovery.
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FAQ
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -1348,85 +2243,68 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#steps" class="md-nav__link">
+  <a href="#what-is-the-ui-multiplier" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Steps
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-connect-to-your-bc-wallet" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Connect to your BC wallet.
+        What is the UI multiplier?
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-select-the-bep2bep8-assets-to-be-recovered" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#core-formulas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Select the BEP2/BEP8 assets to be recovered.
+        Core formulas
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-input-the-receiver-address" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#contract-interface" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Input the receiver address.
+        Contract interface
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#step-4-confirm-the-receiver-address-and-signing" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#scheduled-multiplier-changes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Confirm the receiver address and signing.
+        Scheduled multiplier changes
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#step-5-send-the-token-recovery-transaction-to-bsc" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#integration-checklist" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Send the token recovery transaction to BSC.
+        Integration checklist
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#step-6-wait-for-the-recovery" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: Wait for the recovery.
+        Documentation
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1455,7 +2333,7 @@
   
   
     <li class="md-path__item">
-      <a href="../../.." class="md-path__link">
+      <a href="../.." class="md-path__link">
         
   <span class="md-ellipsis">
     Home
@@ -1473,10 +2351,10 @@
     
     
       <li class="md-path__item">
-        <a href="../../" class="md-path__link">
+        <a href="../" class="md-path__link">
           
   <span class="md-ellipsis">
-    BNB Chain Fusion
+    Developer Kit
   </span>
 
         </a>
@@ -1491,10 +2369,10 @@
     
     
       <li class="md-path__item">
-        <a href="../merkle-tree-verify/" class="md-path__link">
+        <a href="./" class="md-path__link">
           
   <span class="md-ellipsis">
-    Post Fusion
+    Scaled UI Amount (ERC-8056)
   </span>
 
         </a>
@@ -1513,7 +2391,7 @@
 
 
   
-    <a href="https://github.com/bnb-chain/bnb-chain.github.io/edit/main/docs/bc-fusion/post-fusion/token-recovery.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/bnb-chain/bnb-chain.github.io/edit/main/docs/developer-kit/scaled-ui-amount/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1521,85 +2399,181 @@
   
 
 
-<div><h1 id="token-recovery-dapp">Token Recovery dApp<a class="headerlink" href="#token-recovery-dapp" title="Link to this section">¶</a></h1>
-<p>To facilitate the token migration after the Beacon Chain shutdown,
-the <a href="https://github.com/bnb-chain/BEPs/blob/master/BEPs/BEP-299.md">BEP299</a> is proposed
-to recover the BEP2/BEP8 assets on the Beacon Chain to the BSC chain. This document will guide you through the process
-of token recovery.</p>
-<p>Be noted:</p>
-<ul>
-<li>Only <a href="../../users/assets/">the crosschain bound/mirrored assets</a> can be recovered.</li>
-</ul>
-<p>URL:</p>
-<ul>
-<li><strong>Mainnet</strong>: <a href="https://www.bnbchain.org/en/token-recovery">https://www.bnbchain.org/en/token-recovery</a></li>
-</ul>
-<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Link to this section">¶</a></h2>
-<h3 id="step-1-connect-to-your-bc-wallet">Step 1: Connect to your BC wallet.<a class="headerlink" href="#step-1-connect-to-your-bc-wallet" title="Link to this section">¶</a></h3>
-<p><img alt="" src="../../../assets/bcfusion/token-recovery-1.png" style="width:800px"></p>
-<p>When opening the token recovery dApp, you will be prompted to connect to your wallet.</p>
-<p><img alt="" src="../../../assets/bcfusion/token-recovery-2.png" style="width:800px"></p>
-<p><a href="https://chromewebstore.google.com/detail/bnb-chain-wallet/fhbohimaelbohpjbbldcngcnapndodjp">BNB Chain Wallet</a>
-and <a href="https://trustwallet.com/">Trust Wallet Extension</a> are supported. For Trust users, you can refer to
-<a href="https://trustwallet.com/blog/trust-wallet-to-deprecate-bnb-beacon-chain-bep2-bep8-support">this</a> for more information.</p>
-<h3 id="step-2-select-the-bep2bep8-assets-to-be-recovered">Step 2: Select the BEP2/BEP8 assets to be recovered.<a class="headerlink" href="#step-2-select-the-bep2bep8-assets-to-be-recovered" title="Link to this section">¶</a></h3>
-<p><img alt="" src="../../../assets/bcfusion/token-recovery-3.png" style="width:800px"></p>
-<p>Click the “Recover Now” button to start the recovery process.</p>
-<h3 id="step-3-input-the-receiver-address">Step 3: Input the receiver address.<a class="headerlink" href="#step-3-input-the-receiver-address" title="Link to this section">¶</a></h3>
-<p><img alt="" src="../../../assets/bcfusion/token-recovery-4.png" style="width:800px"></p>
-<p>The receiver address on BSC is the address where the BEP2/BEP8 assets will be recovered to.
-The token recovery dApp will try to get the BSC address from your wallet automatically.</p>
-<p><img alt="" src="../../../assets/bcfusion/token-recovery-5.png" style="width:800px"></p>
-<p>If the address is not populated or you want to use a different address, you can also input the address you want to use.</p>
-<p>Be noted:</p>
-<ul>
-<li>
-<p>The address will receive the BEP2/BEP8 assets on BSC. Please input it correctly to avoid any fund loss.</p>
-</li>
-<li>
-<p>The account will be used in the later steps for sending a transaction to BSC. So it should have some BNB on BSC for
-  the gas fee.</p>
-</li>
-<li>
-<p>If this BSC address has already been used as the receiver for a token recovery from a BC address, and it is used again for the recovery of the same token from a different BC address, the unlock time will be recalculated, starting from the most recent recovery and extending 7 days forward.</p>
-</li>
-</ul>
-<h3 id="step-4-confirm-the-receiver-address-and-signing">Step 4: Confirm the receiver address and signing.<a class="headerlink" href="#step-4-confirm-the-receiver-address-and-signing" title="Link to this section">¶</a></h3>
-<p><img alt="" src="../../../assets/bcfusion/token-recovery-6.png" style="width:800px"></p>
-<p>By confirming the token recovery request, you will be promoted to sign a message via your wallet.</p>
-<h3 id="step-5-send-the-token-recovery-transaction-to-bsc">Step 5: Send the token recovery transaction to BSC.<a class="headerlink" href="#step-5-send-the-token-recovery-transaction-to-bsc" title="Link to this section">¶</a></h3>
-<p><img alt="" src="../../../assets/bcfusion/token-recovery-7.png" style="width:800px"></p>
-<p><img alt="" src="../../../assets/bcfusion/token-recovery-8.png" style="width:800px"></p>
-<p>You will be asked to switch to the BSC network in your wallet.</p>
-<p><img alt="" src="../../../assets/bcfusion/token-recovery-mismatch-address.png" style="width:800px"></p>
-<p>The connected address should be the receiver address inputted in the previous step. If it is not, the token recovery
-dApp will detect it and ask you to switch to the correct account in your wallet.</p>
-<p><img alt="" src="../../../assets/bcfusion/token-recovery-9.png" style="width:800px"></p>
-<p>Then click the “Confirm” button to send the token recovery transaction to BSC.</p>
-<p><img alt="" src="../../../assets/bcfusion/token-recovery-10.png" style="width:800px"></p>
-<p>You will be prompted to sign and confirm the transaction, which will be sent to the BSC.</p>
-<h3 id="step-6-wait-for-the-recovery">Step 6: Wait for the recovery.<a class="headerlink" href="#step-6-wait-for-the-recovery" title="Link to this section">¶</a></h3>
-<p><img alt="" src="../../../assets/bcfusion/token-recovery-11.png" style="width:800px"></p>
-<p>After the transaction is sent, the token recovery dApp will populate a window to indicate that
-the token recovery request is sent successfully.</p>
-<p>Finally, you need to wait for 7 days for the BEP2/BEP8 assets to be recovered on BSC and received in your wallet.</p>
-<div class="admonition info">
-<p class="admonition-title">Having Trouble with Token Recovery?</p>
-<p>If you encounter any issues during the recovery process, please first double-check that you have followed all the steps correctly. If the problem persists, you can submit a support ticket through our official channels:</p>
-<ul>
-<li><strong>Discord</strong>: <a href="https://discord.gg/bnbchain">https://discord.gg/bnbchain</a></li>
-<li><strong>Telegram</strong>: <a href="https://t.me/bnbchain_official_bot">@bnbchain_official_bot</a></li>
-</ul>
-<p>Please describe your issue in detail and provide the following information:</p>
-<ul>
-<li>Your wallet address</li>
-<li>Wallet name (e.g., Trust Wallet)</li>
-<li>Wallet version</li>
-<li>If using a hardware wallet, please provide the brand and model (e.g., Ledger Nano X, Trezor Model T)</li>
-<li>Screenshots of the error</li>
-<li>Steps you followed before the error occurred</li>
-</ul>
-</div></div>
+<div><h1 id="scaled-ui-amount-erc-8056">Scaled UI Amount (ERC-8056)<a class="headerlink" href="#scaled-ui-amount-erc-8056" title="Link to this section">¶</a></h1>
+<p>Some ERC-20 tokens on BNB Smart Chain implement <strong>ERC-8056 (Scaled UI Amount)</strong>. The standard adds an on-chain <strong>UI multiplier</strong> that converts raw token balances into the share count users should see, so corporate actions like stock splits, reverse splits, and dividends can be reflected <strong>without minting, burning, or migrating tokens</strong>.</p>
+<p>If your app displays <code>balanceOf()</code> directly, users will see wrong balances and prices whenever the multiplier changes.</p>
+<h2 id="what-is-the-ui-multiplier">What is the UI multiplier?<a class="headerlink" href="#what-is-the-ui-multiplier" title="Link to this section">¶</a></h2>
+<p>The UI multiplier is a single scalar stored on the token contract. It translates raw on-chain amounts into UI display amounts.</p>
+<p><strong>Example — 2-for-1 stock split</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Before split</th>
+<th>After split</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raw on-chain balance</td>
+<td>100 tokens</td>
+<td>100 tokens (unchanged)</td>
+</tr>
+<tr>
+<td>UI multiplier</td>
+<td><code>1.0</code> (<code>1e18</code>)</td>
+<td><code>2.0</code> (<code>2e18</code>)</td>
+</tr>
+<tr>
+<td>UI display amount</td>
+<td>100 shares</td>
+<td>200 shares</td>
+</tr>
+<tr>
+<td>UI price per share</td>
+<td>$50.00</td>
+<td>$25.00</td>
+</tr>
+<tr>
+<td>Total value</td>
+<td>$5,000</td>
+<td>$5,000</td>
+</tr>
+</tbody>
+</table>
+<p>No tokens move. Only the multiplier changes — and every balance, transfer amount, and price you show should scale with it.</p>
+<h2 id="core-formulas">Core formulas<a class="headerlink" href="#core-formulas" title="Link to this section">¶</a></h2>
+<p>The multiplier is always <strong>18-decimal fixed point</strong> (<code>1e18</code> = 1.0). Apply it after standard ERC-20 decimal adjustment.</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Raw amount</strong></td>
+<td>What <code>balanceOf()</code> returns (<code>uint256</code>)</td>
+</tr>
+<tr>
+<td><strong>UI multiplier</strong></td>
+<td>Returned by <code>uiMultiplier()</code> — <code>1e18</code> = 1.0, <code>2e18</code> = 2.0</td>
+</tr>
+<tr>
+<td><strong>UI amount</strong></td>
+<td>What users should see — <code>rawAmount × uiMultiplier / 1e18</code></td>
+</tr>
+<tr>
+<td><strong>UI price</strong></td>
+<td>Price per share. CEX Spot already quotes UI price; convert raw-denominated feeds with <code>rawPrice × 1e18 / uiMultiplier</code></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>UI amount = rawAmount × uiMultiplier / 1e18
+UI price  = rawPrice × 1e18 / uiMultiplier   ← only for raw-denominated price sources
+</code></pre></div>
+<p>Prefer the on-chain helpers <code>toUIAmount()</code> and <code>fromUIAmount()</code> over manual arithmetic — they match contract rounding.</p>
+<h2 id="contract-interface">Contract interface<a class="headerlink" href="#contract-interface" title="Link to this section">¶</a></h2>
+<div class="highlight"><pre><span></span><code>interface<span class="w"> </span>IScaledUIAmount<span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">event</span><span class="w"> </span><span class="nv">UIMultiplierUpdated</span><span class="p">(</span>
+<span class="w">        </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">oldMultiplier</span><span class="p">,</span>
+<span class="w">        </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">newMultiplier</span><span class="p">,</span>
+<span class="w">        </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">setAtTimestamp</span><span class="p">,</span>
+<span class="w">        </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">effectiveAtTimestamp</span>
+<span class="w">    </span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">uiMultiplier</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">toUIAmount</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">rawAmount</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">fromUIAmount</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">uiAmount</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">balanceOfUI</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">account</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">setUIMultiplier</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">newMultiplier</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">effectiveAtTimestamp</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>balanceOfUI(address)</code></td>
+<td>Primary balance display</td>
+</tr>
+<tr>
+<td><code>toUIAmount(rawAmount)</code></td>
+<td>Transfer history, supply, any raw → UI conversion</td>
+</tr>
+<tr>
+<td><code>fromUIAmount(uiAmount)</code></td>
+<td>User input → <code>transfer()</code> / <code>approve()</code> params</td>
+</tr>
+<tr>
+<td><code>uiMultiplier()</code></td>
+<td>Price conversion, multiplier badges, caching</td>
+</tr>
+</tbody>
+</table>
+<p>Detect ERC-8056 tokens with ERC-165 <code>supportsInterface()</code> using the interface ID from <a href="https://eips.ethereum.org/EIPS/eip-8056">EIP-8056</a>, or maintain a curated allowlist of known compliant contracts.</p>
+<h2 id="scheduled-multiplier-changes">Scheduled multiplier changes<a class="headerlink" href="#scheduled-multiplier-changes" title="Link to this section">¶</a></h2>
+<p>Issuers can announce a future multiplier via <code>setUIMultiplier(newMultiplier, effectiveAtTimestamp)</code>. The <code>UIMultiplierUpdated</code> event fires immediately, but all view functions keep using the <strong>old</strong> multiplier until <code>block.timestamp &gt;= effectiveAtTimestamp</code>.</p>
+<p>When a future <code>effectiveAtTimestamp</code> is detected, show a notice to users and refresh cached values once the effective time passes. Do not apply the new multiplier early.</p>
+<h2 id="integration-checklist">Integration checklist<a class="headerlink" href="#integration-checklist" title="Link to this section">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Surface</th>
+<th>Display to user</th>
+<th>On-chain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Balance</td>
+<td><code>balanceOfUI(address)</code></td>
+<td><code>balanceOf(address)</code></td>
+</tr>
+<tr>
+<td>Send amount</td>
+<td>User enters UI amount</td>
+<td><code>fromUIAmount()</code> → <code>transfer()</code></td>
+</tr>
+<tr>
+<td>Transfer history</td>
+<td><code>toUIAmount(rawTransferAmount)</code></td>
+<td>Raw <code>Transfer</code> event amount</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>CEX Spot price (already UI) or convert raw feeds</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Total supply</td>
+<td><code>toUIAmount(totalSupply())</code></td>
+<td><code>totalSupply()</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Link to this section">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Guide</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="demo/">Demo</a></td>
+<td>Detect ERC-8056, show the correct balance, convert a send amount, and react to multiplier changes</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../">← Developer Kit overview</a></p></div>
 
 
 
@@ -1620,7 +2594,7 @@ the token recovery request is sent successfully.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 19, 2025 09:50:40 UTC">December 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 10, 2026 07:54:59 UTC">July 10, 2026</span>
   </span>
 
     
@@ -1756,19 +2730,19 @@ the token recovery request is sent successfully.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.instant", "navigation.tracking", "navigation.integration", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.sections", "navigation.prune", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.action.edit", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.instant", "navigation.tracking", "navigation.integration", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.sections", "navigation.prune", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.action.edit", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
 
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../../assets/js/mathjax.js"></script>
+        <script src="../../assets/js/mathjax.js"></script>
       
-        <script src="../../../assets/js/custom.js"></script>
+        <script src="../../assets/js/custom.js"></script>
       
-        <script src="../../../assets/js/superintern.js"></script>
+        <script src="../../assets/js/superintern.js"></script>
       
-        <script src="../../../assets/js/footer-menu.js"></script>
+        <script src="../../assets/js/footer-menu.js"></script>
       
     
 <script src="https://unpkg.com/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha384-Wuix6BuhrWbjDBs24bXrjf4ZQ5aFeFWBuKkFekO2t8xFU0iNaLQfp2K6/1Nxveei" crossorigin="anonymous"></script>
